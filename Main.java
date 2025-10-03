@@ -1,4 +1,6 @@
 import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
@@ -14,7 +16,15 @@ public class Main {
 			}
 		}
 
-		int x = Math.random() * width;
-		int y = Math.random() * height;
+		Random rand = new Random();
+
+		int x = rand.nextInt(width);
+		int y = rand.nextInt(height);
+
+		maze[x][y] = true; // Set starting cell to true (path)
+
+		List<int[]> frontier = new ArrayList<>();
+
+		
 	}
 }
