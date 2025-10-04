@@ -50,14 +50,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path dist | Out-Null
-          jpackage --input installer-input \
-                   --main-jar mazegen.jar \
-                   --main-class Main \
-                   --name Mazegen \
-                   --type exe \
-                   --app-version 1.0.0 \
-                   --win-console \
-                   --dest dist
+          & jpackage --input installer-input --main-jar mazegen.jar --main-class Main --name Mazegen --type exe --app-version 1.0.0 --win-console --dest dist
 
       - name: List dist contents
         shell: pwsh
